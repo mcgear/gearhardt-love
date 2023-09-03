@@ -1,10 +1,6 @@
-import { curIconSetGenerateConfig } from "./fathym-atomic-icons.config.ts";
-import { iconSetPlugin } from "@fathym/atomic-icons";
-
+import { defineConfig } from "$fresh/server.ts";
+import twindPlugin from "$fresh/plugins/twind.ts"
+import twindConfig from "./twind.config.ts";
 export default defineConfig({
-  plugins: [
-    ...
-    await iconSetPlugin(curIconSetGenerateConfig),
-    ...
-  ],
+  plugins: [twindPlugin(twindConfig)]
 });
